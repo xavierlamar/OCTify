@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Acte de naissance</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(52, 56, 250);
+        }
+
+        #head {
+            width: 50%;
+            /* margin-left: 30%;*/
+        }
+
+        input {
+            padding: 2%;
+        }
+
+        #head_left {
+            float: left;
+            width: 40%;
+            margin-top: 5%;
+        }
+
+        /* fieldset {
+            background-color: white;
+            width: 90%;
+            margin-left: 50%;
+            margin-right: -50%;
+
+        } */
+
+        #head_right {
+            /* float: right; */
+            margin-top: -7%;
+            margin-left: 135%;
+            width: 40%;
+        }
+
+        section {
+            width: 60%;
+            border: solid black 1px;
+            margin-left: 25%;
+            padding: 2%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* #formulaire {
+            /* margin-left: 30%; */
+        /* background-color: white;
+            border: solid black 1px;
+            border-radius: 2%;
+            width: 90%; */
+        /* } */
+
+        #signatures {
+            font-size: 13px;
+        }
+
+        #qr {
+            margin-left: 53%;
+            width: 20%;
+            margin-top: -11%;
+        }
+
+        button[type="submit"] {
+            padding: 4%;
+            margin-top: 30%;
+        }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="dist/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+    <script type="application/javascript" src="dist/js/bootstrap.js"></script>
+    <script type="application/javascript" src="dist/js/jquery.js"></script>
+    <script type="application/javascript" src="dist/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+    <section>
+        <!-- <center> -->
+        <div>
+
+
+            <div id="head">
+                <div id="head_left">
+                    <center>
+                        <b>
+                            PROVINCE <br>
+                            <input type="text" name="Province" required size="10" value=<%=acts.Province%> ><br>
+                            DEPARTEMENT <br>
+                            <input type="text" name="Departement" size="10" required value=<%=acts.Departement%>
+                            ><br>
+                            ARRONDISSEMENT <br>
+                            <input type="text" name="arrondissement" size="10" required
+                                   value=<%=acts.Arrondissement%>
+                            ><br>
+                        </b>
+                    </center>
+                </div>
+                <div id="head_right">
+                    <center>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b>
+                            REPUBLIQUE DU CAMEROUN <br>
+                            Paix - Travail - Patrie <br><br>
+                            REPUBLIC OF CAMEROON <br>
+                            Peace - Work - Fatherland <br>
+                            <b>__________</b>
+                        </b>
+                    </center>
+                </div>
+                <center>
+                    <center><br>
+                        <p><b>CENTRE D'ETAT CIVIL </b> </p>
+                        CIVIL STATUT REGISTRATION CENTER
+                    </center>
+            </div>
+            <div id="formulaire">
+
+                <b>De - </b>of <input type="text" name="cDe" size="10" required value=<%=acts.cDe%>>
+                <p>
+                    <font size="5px"><b>ACTE DE NAISSANCE </b></font>
+                    <font size="3px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>N°
+                            : <input type="number" name="numero" size="10" required value=<%=acts.Numero%>>
+                            <!-- /<input type="text" name="numero" size="3">/<input
+                                   type="text" name="" size="3">/<input type="text" name="" size="3"></b> -->
+                    </font>
+                    <br>
+                    <font size="5px"><b></b>BIRTH CERTIFICATE</font>
+                </p><br><br>
+                <table>
+                    <tr>
+                        <td>
+                            <b>Nom de famille de l'enfant:</b><br>Name of the child
+                        </td>
+                        <td>
+                            <input size="40" type="text" name="Nomdefamilledelenfant" required
+                                   value=<%=acts.Nomdefamilledelenfant%>>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Prenom(s) de l'enfant: </b><br>Given name(s) of the child
+                        </td>
+                        <td>
+                            <input type="text" name="Prenomdelenfant" size="40" required
+                                   value=<%=acts.Prenomdelenfant%>>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Le - </b>On </td>
+                        <td><input type="text" name="Le" size="40" required value=<%=acts.Le%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Est né à - </b>Was born in/at </td>
+                        <td><input type="text" name="Estnéà" required value=<%=acts.Estnéà%>
+                            size="40"></b><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Nom de famille de l'enfant </b><br> Name of the child<br></td>
+                        <td><input type="text" name="Nomdefamilledelenfant" required
+                                   value=<%=acts.Le%>
+                            size="40"><br></td>
+                    </tr>
+                    <!-- <tr>
+                        <td><b>Prenom(s) de l'enfant </b><br>Given name(s) of the child<br><br></td>
+                        <td><input type="text" name="Prenomdelenfant" required value=""
+                                   size="40"></td>
+                    </tr> -->
+                    <tr>
+                        <td><b>De Sexe -</b>Sex </td>
+                        <td><input type="text" name="DeSexe" required size="40" value=<%=acts.DeSexe%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>De -</b>Of </td>
+                        <td><input type="text" name="De" required size="40" value=<%=acts.PDe%>></b><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Né à - </b>Born in/at </td>
+                        <td><input type="text" name="Néà" required size="40" value=<%=acts.PNéà%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Le - </b>On </td>
+                        <td><input type="text" name="Le" required size="40" value=<%=acts.PLe%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Domicilié à - </b>Residing at </td>
+                        <td><input type="text" name="Domiciliéà" size="40" required
+                                   value=<%=acts.PDomiciliéà%>><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <b>Profession - </b>Occupation </td>
+                        <td><input type="text" name="Profession" required size="40"
+                                   value=<%=acts.PProfession%>><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Et de - </b>And of </td>
+                        <td><input type="text" name="Etde" size="40" required value=<%=acts.Etde%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Né à - </b>Born in/at </td>
+                        <td><input type="text" name="Néà" size="40" required value=<%=acts.MNéà%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Le - </b>On </td>
+                        <td><input type="text" name="Le" size="40" required value=<%=acts.MLe%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Domicilié à - </b>Residing at </td>
+                        <td><input type="text" size="40" required name="Domiciliéà"
+                                   value=<%=acts.MDomiciliéà%>><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Profession - </b>Occupation </td>
+                        <td><input type="text" size="40" required name="Profession"
+                                   value=<%=acts.MProfession%>><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Dressé le:</b><br> Drawn up on<br></td>
+                        <td><input type="text" name="Dressé" size="40" required value=<%=acts.Dresséle%>></td>
+                    </tr>
+                    <tr>
+                        <td><b>Sur la déclarationn de </b><br>In accordance with the<br> declaratiion of </td>
+                        <td><input type="text" size="40" required name="Surladeclarationde"
+                                   value=<%=acts.Surladeclarationnde%>><br></td>
+                    </tr>
+                    <tr>
+                        <!-- <td></td>
+                    <td><input type="text" size="40" required name="Surladeclarationde"
+                               value=<%=acts.Dresséle%>><br><br></td> -->
+                    </tr>
+                    <tr rowspan="2">
+                        <td><b>Lesquels ont certifiés la sincerité <br>de la presente déclation. </b><br>
+                            who attested to the truth of<br> this declaration.<br><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Par nous </b></td>
+                        <td><input type="text" size="40" name="Parnous" required
+                                   value=<%=acts.Parnous%>><br>,Officier<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>De l'état civil de </b><br>By Us, civil Status Registrar
+                            for</td>
+                        <td><input type="text" name="Delétatcivilde" size="40" required
+                                   value=<%=acts.Delétatcivilde%>><br>Centre</td>
+                    </tr>
+                    <tr>
+                        <td>Assisté de <br>In the presence of</td>
+                        <td><input type="text" name="Assistéde" required size="40" value=<%=acts.Assistéde%>></td>
+                    </tr>
+                    <tr>
+                        <td>Secretaire d'état civil.<br> Grill status
+                            Secretary.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Le Sécrétaire <br>Secretary</td>
+                        <td align="center">Signature de l'Officier d'état civil<br>signature
+                            of Civil Status Registar</td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Envoyer</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <!-- <b>Nom de famille de l'enfant: <input size="40" type="text" name="Nomdefamilledelenfant" required
+                       value=<%=acts.Nomdefamilledelenfant%>></b><br> -->
+                <!-- <input type="text" name="Surladeclarationde" value="" size="105"><br> -->
+                <!-- <div id="signatures">
+                &nbsp; &nbsp; &nbsp; &nbsp;<b>&nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Signature
+                    de l'Officier d'état civil</b><br>
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Declarant&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;signature
+                of Civil Status Registar <br><br><br><br><br>
+            </div> -->
+
+
+
+
+            </div>
+            <img id="qr" src=<%=qr %>>
+
+            </p>
+        </div>
+        <!-- <script src="bundle.js"></script> -->
+    </section>
+</body>
+
+</html>

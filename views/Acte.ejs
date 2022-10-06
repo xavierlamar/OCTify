@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .code_qr {
+            font-size: 15px;
+            margin-right: auto;
+            width: 250px;
+            max-width: 250px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1>Enter Your Birth Certificate Information</h1>
+
+    <form method="post" action="/Acte/create">
+        <div>
+            <label>PROVINCE</label>
+            <input type="text" name="Province" required />
+        </div><br>
+        <div>
+            <label>DEPARTEMENT</label>
+            <input type=" text" name="Departement" required />
+        </div><br>
+        <div>
+            <label>ARRONDISSEMENT</label>
+            <input type="text" name="Arrondissement" required />
+        </div><br>
+        <div>
+            <label>De</label>
+            <input type="text" name="cDe" required />
+        </div><br>
+        <div>
+            <label>N°</label>
+            <input type="number" name="Numero" required />
+        </div><br>
+        <div>
+            <label>Nom de famille de l'enfant</label>
+            <input type="text" name="Nomdefamilledelenfant" required />
+        </div><br>
+        <div>
+            <label>Prenom(s) de l'enfant</label>
+            <input type="text" name="Prenomdelenfant" required />
+        </div><br>
+        <div>
+            <label>Le - On</label>
+            <input type="text" name="Le" required />
+        </div><br>
+        <div>
+            <label>Est né à</label>
+            <input type="text" name="Estnéà" required />
+        </div><br>
+        <div>
+            <label>De Sexe</label>
+            <input type="text" name="DeSexe" required />
+        </div><br>
+        <div>
+            <label>De</label>
+            <input type="text" name="PDe" required />
+        </div><br>
+        <div>
+            <label>Né à</label>
+            <input type="text" name="PNéà" required />
+        </div><br>
+        <div>
+            <label>Le</label>
+            <input type="text" name="PLe" required />
+        </div><br>
+        <div>
+            <label>Domicilié à</label>
+            <input type="text" name="PDomiciliéà" required />
+        </div><br>
+        <div>
+            <label>Profession</label>
+            <input type="text" name="PProfession" required />
+        </div><br>
+        <div>
+            <label>Et de</label>
+            <input type="text" name="Etde" required />
+        </div><br>
+        <div>
+            <label>Né à</label>
+            <input type="text" name="MNéà" required />
+        </div><br>
+        <div>
+            <label>Le</label>
+            <input type="text" name="MLe" required />
+        </div><br>
+        <div>
+            <label>Domicilié à</label>
+            <input type="text" name="MDomiciliéà" required />
+        </div><br>
+        <div>
+            <label>Profession</label>
+            <input type="text" name="MProfession" required />
+        </div><br>
+        <div>
+            <label>Dressé le</label>
+            <input type="text" name="Dresséle" required />
+        </div><br>
+        <div>
+            <label>Sur la declarationn de </label>
+            <input type="text" name="Surladeclarationnde" required />
+        </div><br>
+        <div>
+            <label>Lesquels ont certifiés la sincerité de la presente déclation.</label>
+            <!-- <input type="text" oninput="change(this)" name="Lesquels" required /> -->
+        </div><br>
+        <div>
+            <label>Par nous</label>
+            <input type="text" name="Parnous" required />
+        </div><br>
+        <div>
+            <label>De l'état civil de </label>
+            <input type="text" name="Delétatcivilde" required />
+        </div><br>
+        <div>
+            <label>Assisté de</label>
+            <input type="text" name="Assistéde" required />
+        </div><br>
+        <div>
+            <label>Numero de Telephone</label>
+            <input type="text" name="telephone" required />
+        </div><br>
+        <div>
+            <input id="file-upload" type="file"  aria-label="Upload your file">
+            <input id="image" type="text"  aria-label="Upload your file" value="" name="img">
+        </div><br>
+                    <img id="img-preview" src=""  />
+
+        <button type="submit">Enregistrer</button>
+    </form>
+    <div class="code_qr">
+        <img class="qrious">
+        <div class="information">
+            <p style="color: #000099;">Valeur</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dtszkvxdq/image/upload'
+var imgPreview = document.getElementById('img-preview');
+var fileUpload = document.getElementById('file-upload');
+var image = document.getElementById('image');
+var iframe = document.getElementById('iframe');
+
+fileUpload.addEventListener('change',function(event){
+
+var file = event.target.files[0];
+var formData = new FormData();
+formData.append('file',file)
+formData.append("upload_preset","upload")
+
+var uploadRes = axios({
+    url:CLOUDINARY_URL,
+    method:'POST',
+    Headers:{
+        'Content-Type':'application/x-www-form-urlencoded'
+    },
+    data:formData
+
+}).then(function(res){
+    console.log(res.data.url);
+    imgPreview.src = res.data.url;
+    image.value = res.data.url;
+    iframe.src = res.data.url;
+}).catch(function(err){
+    console.log(err);
+})
+
+})
+</script>
+
+
+</body>
+
+</html>
